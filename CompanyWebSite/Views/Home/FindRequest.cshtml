@@ -9,7 +9,7 @@
 
 <div>
     <h4>AdminRequestViewModel</h4>
-    <hr />
+    <hr/>
 
     @{
         if (Model == null)
@@ -18,12 +18,32 @@
         }
         else
         {
-            if (Model.RequestStatus==true)
+            if (Model.RequestStatus == true)
             {
                 ViewBag.requestStatus = "درخواست تأیید شده است";
             }
 
             <table class="table table-bordered table-striped">
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RequestViewModel.Name)</td>
+                    <td>@Html.DisplayFor(model => model.RequestViewModel.Name)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RequestViewModel.Email)</td>
+                    <td>@Html.DisplayFor(model => model.RequestViewModel.Email)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RequestViewModel.PhoneNumber)</td>
+                    <td>@Html.DisplayFor(model => model.RequestViewModel.PhoneNumber)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RequestViewModel.Subject)</td>
+                    <td>@Html.DisplayFor(model => model.RequestViewModel.Subject)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RequestViewModel.Description)</td>
+                    <td>@Html.DisplayFor(model => model.RequestViewModel.Description)</td>
+                </tr>
                 <tr>
                     <td>@Html.DisplayNameFor(model => model.RequestViewModel.DeliveryDays)</td>
                     <td>@Html.DisplayFor(model => model.RequestViewModel.DeliveryDays)</td>
@@ -33,7 +53,7 @@
                     <td>@Html.DisplayFor(model => model.Price)</td>
                 </tr>
                 <tr>
-                    
+
                     <td>@Html.DisplayNameFor(model => model.RequestStatus)</td>
                     <td> @ViewBag.requestStatus</td>
                 </tr>
@@ -47,7 +67,7 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-success" role="progressbar"
                                  aria-valuenow="@Model.Progress" aria-valuemin="0" aria-valuemax="100"
-                                 style="width: @Model.Progress%; ">
+                                 style="width: @Model.Progress%;">
                                 <span >@Model.Progress% پروژه به اتمام رسیده است </span>
                             </div>
                         </div>
@@ -62,4 +82,10 @@
 
 
     }
+</div>
+<div class="alert alert-danger">
+    <p>کلیک کردن دکمه ذیل به منزله تایید مبلغ درخواستی می باشد</p>
+</div>
+<div>
+    @Html.ActionLink("تایید", "Index", "Home", null, new { @class = "acceptbutton" })
 </div>

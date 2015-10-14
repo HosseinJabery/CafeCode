@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+<div class="nav navbar-default nvbar">
+    @Html.ActionLink("خانه", MVC.Home.Index())
+    @Html.ActionLink("سفارش", MVC.Home.NewRequest())
+    @Html.ActionLink("رهگیری سفارش", "NewRequest", "Home")
+
+    @*<form class="navbar-form navbar-left" method="GET" action="@Url.Action("FindRequest","Home")">
+        <div class="input-group">
+            <input type="search" name="in" class="form-control" />
+            <span class="input-group-btn">
+                <button id="search-btn" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            </span>
+        </div>
+
+    </form>*@
+</div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+        </div>
+ 
+
+<div>
+    @RenderBody()
+
+
+</div>
+    @RenderSection("scripts",false)
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

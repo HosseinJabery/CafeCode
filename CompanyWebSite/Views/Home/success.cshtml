@@ -1,0 +1,55 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+@model DomainClasses.Request
+
+@{
+    ViewBag.Title = "جزئیات ثبت درخواست";
+}
+
+<p class="alert alert-danger">لطفاً کد رهگیری را یادداشت نموده تا برای رهگیری درخواست در مراحل بعدی از آن استفاده نمایید</p>
+<div>
+    <h4>جزئیات ثبت درخواست</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InterceptionCode)
+        </dt>
+
+        <dd style="font-size: 20px; color: red">
+            @Html.DisplayFor(model => model.InterceptionCode)
+        </dd>
+
+    </dl>
+</div>
+

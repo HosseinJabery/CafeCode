@@ -1,0 +1,65 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+@model ViewModels.AdminRequestViewModel
+
+@{
+    ViewBag.Title = "FindRequest";
+}
+
+<h2>FindRequest</h2>
+
+<div>
+    <h4>AdminRequestViewModel</h4>
+    <hr />
+
+    @{
+        if (Model == null)
+        {
+            <h1>موردی یافت نشد</h1>
+        }
+        else
+        {
+            if (Model.RequestStatus==true)
+            {
+                ViewBag.requestStatus = "درخواست تأیید شده است";
+            }
+
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RequestViewModel.DeliveryDays)</td>
+                    <td>@Html.DisplayFor(model => model.RequestViewModel.DeliveryDays)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Price)</td>
+                    <td>@Html.DisplayFor(model => model.Price)</td>
+                </tr>
+                <tr>
+                    
+                    <td>@Html.DisplayNameFor(model => model.RequestStatus)</td>
+                    <td> @ViewBag.requestStatus</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.RejectReason)</td>
+                    <td>@Html.DisplayFor(model => model.RejectReason)</td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.Progress)</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar"
+                                 aria-valuenow="@Model.Progress" aria-valuemin="0" aria-valuemax="100"
+                                 style="width: @Model.Progress%; ">
+                                <span >@Model.Progress% پروژه به اتمام رسیده است </span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.DisplayNameFor(model => model.DeadLine)</td>
+                    <td>@Html.DisplayFor(model => model.DeadLine)</td>
+                </tr>
+            </table>
+        }
+
+
+    }
+</div>

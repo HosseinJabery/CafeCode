@@ -1,0 +1,164 @@
+﻿@font-face {
+    font-family: 'DroidKufi-Regular';
+    src: url('../fonts/DroidKufi-Regular.eot') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'DroidKufi-Regular';
+    src: url('../fonts/DroidKufi-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DroidKufi-Bold';
+    src: url('../fonts/DroidKufi-Bold.eot') format('embedded-opentype');
+}
+
+
+
+@font-face {
+    font-family: 'Droid Arabic Naskh';
+    src: url('../fonts/Droid Arabic Naskh.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'DroidKufi-Bold';
+    src: url('../fonts/DroidKufi-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Kufyan Arabic Medium';
+    src: url('../fonts/Kufyan Arabic Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Kufyan Arabic Black';
+    src: url('../fonts/Kufyan Arabic Black.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Swissra';
+    src: url('../fonts/Swissra Condensed Heavy.woff') format('woff');
+}
+@font-face {
+    font-family: 'Iranian';
+    src: url('../fonts/Iranian.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Swissra Thin';
+    src: url('../fonts/Swissra Condensed Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Koodak';
+    src: url('../fonts/Koodak.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Yekan';
+    src: url('../fonts/Yekan.woff') format('woff');
+}
+@font-face {
+    font-family: 'Seba';
+    src: url('../fonts/Sheba Font Arabic by Ali Almithaly ( www.rezagraphic.ir ).ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Kindah';
+    src: url('../fonts/KindahRegular-Regular.otf') format('opentype');
+}
+body {
+    /*background-image: url('triangles.png');*/
+    background-color: #F5F5F5;
+    color: #212121;
+    font-family: 'Droid Arabic Naskh';
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 14px;
+    }
+.nvbar {
+
+    top: 20px;
+    padding-top: 10px;
+    /*border: 1px solid #0F5959;
+    background-color: #0F5959;*/
+    border-radius: 0;
+    font-size: 20px;
+}
+.nvbar a {
+    font-family: 'DroidKufi-Bold';
+    color: #000;
+    margin-right: 20px;
+    }
+.nvbar a:hover {
+
+    color: aliceblue;
+    text-decoration: none;
+}
+.nvbar a:focus {
+    
+    color: #595959;
+    text-decoration: none;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select
+ {
+    width: 480px;
+    
+}
+textarea {
+    width: 100%;
+    height: 300px;
+    background-color: #F5F5F5;
+    border: 1px solid #DEDEDE;
+    font-family: 'Iranian';
+}
+#banner {
+    background-image: url('girly_desk-wallpaper-1920x1200.jpg');
+    /*background-image: url('desk-laptop-notebook-pen.jpg');*/
+    height: 516px;
+    width: 100%;
+    padding: 180px 50px;
+}
+.acceptbutton {
+    background-color:  #0F5959;
+    border: #157D7D;
+    color: white;
+    border-radius: 0;
+    padding: 5px;
+    max-width: 180px;
+}
+
+.acceptbutton:hover {
+    background-color:  #157D7D;
+    color: white;
+    
+}
+.acceptbutton:focus {
+    background-color: #0D4F4F;
+    color: white;
+}
+
+.input-control {
+    background-color: #F5F5F5;
+    border: 1px solid #DEDEDE;
+    font-family: 'Iranian';
+}
+.panel-dark {
+    background-color: #EBEBEB;
+    border: 1px solid #DEDEDE;
+    border-radius: 0;
+}
+.panel-heading-blue {
+    background-color:  #F0F0F0;
+    border-bottom: 1px solid #DEDEDE;
+    border-radius: 0;
+    
+}
+.drop-down {
+    border-radius: 3px;
+    border: 1px solid #f4a460;
+    background-color: #ee82ee;
+}

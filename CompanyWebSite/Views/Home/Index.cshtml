@@ -1,0 +1,50 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<div id="banner">
+
+       
+    <section style="height: 200px; width: 700px; opacity: 0.9; background-color: #8CAF5B; position: relative;border-radius: 7px ">
+        <p>
+            در کمترین وقت پروژه خود را سفارش دهید
+        </p>
+        @Html.ActionLink("سفارش پروژه","NewRequest",null,new {@class="btn acceptbutton"})
+    </section>
+    <section id="popup"style="height: 50px; width: 40px; opacity: 0.01;  background-color: #fff; position: relative; border-radius: 7px;float: right ">
+        <p>آمار وب سایت</p>
+    </section>
+
+</div>
+<div style="margin-right: 45%">
+
+    <img src="~/Content/Logo6.png" />
+</div>
+
+<div id="searchform" class="col-md-9" style="margin-left: 50%; margin-right: 20%; margin-top: 30px;">
+    <form method="GET" action="@Url.Action("FindRequest","Home")">
+
+        <p class="col-md-3 "> کد رهگیری خود را وارد کنید</p>
+        <input type="search" name="interceptionCode" placeholder="کد رهگیری" class="input-control col-md-4 " style="margin-right: 0px" />
+        <input type="submit" value="جستجو" class="acceptbutton col-md-1" style="margin-right: 10px" />
+    </form>
+</div>
+@section scripts{
+    <script>
+        $(function() {
+            $("#popup").mouseenter(function() {
+                $("#popup").animate({
+                    opacity: '0.8',
+                    height: '50px',
+                    width: '150px'
+                });
+            });
+        $("#popup").mouseleave(function() {
+            $("#popup").animate({
+                opacity: '0.01',
+                height: '50px',
+                width: '40px'
+            });
+        });
+    });
+    </script>
+}

@@ -29,6 +29,16 @@ namespace ServiceLayer.ServiceContract
             _applicatioDbContext.SaveChanges();
         }
 
+        public void EditRequest(int requestId,Request requestParam)
+        {
+            var request = FindRequestById(requestId);
+            if (request!=null)
+            {
+                request = requestParam;
+                _applicatioDbContext.SaveChanges();
+            }
+        }
+
         public Request FindRequest(string interceptionCode)
         {
             return _requests.FirstOrDefault(i => i.InterceptionCode == interceptionCode);

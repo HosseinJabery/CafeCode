@@ -7,6 +7,7 @@ namespace ServiceLayer.ServiceContract
     {
         void AddNewRequest(Request request);
         void RemoveRequest(int requestId);
+        void EditRequest(int requestId);
         Request FindRequest(string interceptionCode);
         Request FindRequestById(int requestId);
         IList<Request> GetAllRequests();

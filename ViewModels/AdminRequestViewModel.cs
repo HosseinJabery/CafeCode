@@ -14,10 +14,22 @@ namespace ViewModels
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RequestId { get; set; }
         public NewRequestViewModel RequestViewModel { get; set; }
+
+        [Display(Name = "مبلغ پرداختی")]
         public string Price { get; set; }
+
+        [Display(Name = "وضعیت درخواست")]
         public bool? RequestStatus { get; set; }
+
+
+        [Display(Name = "دلیل رد درخواست")]
         public string RejectReason { get; set; }
+
+
+        [Display(Name = "درصد پیشرفت پروژه")]
         public int?  Progress { get; set; }
+
+        [Display(Name = "زمان تحویل پروژه")]
         public string DeadLine { get; set; }
        
     }
